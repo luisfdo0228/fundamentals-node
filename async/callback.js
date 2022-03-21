@@ -1,22 +1,22 @@
-function hola(nombre, myCallback) {
+function hello(name, myCallback) {
     setTimeout(() => {
-        console.log('Hola, soy '+nombre);
-        myCallback(nombre);
+        console.log('Hello, I am '+name);
+        myCallback(name);
     }, 1000);
 }
 
-function adios(nombre, otherCallback) {
+function bye(name, otherCallback) {
     setTimeout(() => {
-        console.log('Adios, '+nombre);
+        console.log('Bye, '+name);
         otherCallback();
     }, 3000);
 }
 
-console.log('Iniciando proceso...');
+console.log('Start process...');
 
-hola('Luis', function (name){
-    adios(name, function (){
-        console.log('Terminando proceso adios...');
+hello('Luis', function (name) {
+    bye(name, function (){
+        console.log('End process...');
     });
 });
 
